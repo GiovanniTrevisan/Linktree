@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0e0e0;
+    background-color: ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    padding-block: clamp(2rem, 10vw, 4rem);
+}
+
+.foto-perfil {
+    border-radius: 8px;
+    height: 150px;
+
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+        -15px -15px 30px #ffffff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    padding: clamp(1em, 5vw, 2em);
+
+    width: 100vw;
+    max-width: 500px;
+
+    margin-bottom: 6vh;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+h1 {
+    font-size: clamp(1.9em, 7vw, 4em);
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    vertical-align: middle;
+}
+
+.link {
+    width: 100%;
+    max-width: 90vw;
+    ;
+    padding: 0.5em;
+
+    margin: 2px 0;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    height: 65px;
+
+    border-radius: 60px;
+    background: #e0e0e0;
+    box-shadow: 10px 10px 19px #bebebe,
+        -10px -10px 19px #ffffff;
+
+    transition: all ease 0.1s;
+
+}
+
+.link:hover,
+.link:focus {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 19px #bebebe,
+        -10px -10px 19px #ffffff;
+
+}
+
+
+.link:active {
+    transform: scale(0.95);
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+}
+
+.icon {
+    max-width: 50px;
+    border-radius: 50%;
+
+}
+
+.link-text {
+    padding: 0 24px;
+}
+
+h2 {
+    font-size: 175%;
+}
+
+p {
+    font-size: 85%;
+}
+
+footer {
+    background: black;
+    color: #e0e0e0;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+footer > p {
+    font-size: 80%;
+    font-weight: 100;
+    padding: 40px;
+}
