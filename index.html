@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="script.js"></script>
     <title>Giovanni Trevisan</title>
 </head>
 
-<body>
+<body class="dark-theme">
+
+
     <div class="video-bg">
         <video width="320" height="240" autoplay loop muted>
             <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
@@ -17,9 +20,9 @@
         </video>
     </div>
 
-    <div class="app">
 
-        <div class="container">
+    <div class="app dark-theme">
+        <div class="container dark-theme">
             <header>
                 <div class="picture"><img class="foto-perfil" src="content/foto-perfil.jpg" alt=""></div>
                 <h2>Giovanni Trevisan</h2>
@@ -50,14 +53,16 @@
                 </a>
 
                 <a class="link" href="content/Resumo_Profissional-2022.pdf" download="cv-giovanni-trevisan.pdf">
-                    <img src="content/download.png" class="icon notion-icon download"
-                        alt="resumo Profissional">
+                    <img src="content/download.png" class="icon notion-icon download" alt="resumo Profissional">
                     <span class="link-text">
                         Resumo Profissional
                     </span>
                 </a>
 
             </main>
+                <div class="holder on">
+                    <div class="toggle"></div>
+                </div>
         </div>
 
         <footer>
@@ -66,6 +71,7 @@
             </p>
         </footer>
     </div>
+
 </body>
 
 </html>

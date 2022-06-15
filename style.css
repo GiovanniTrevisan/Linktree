@@ -14,9 +14,13 @@ body {
     flex-direction: column;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 400;
-    color: white;
+    color: black;
     padding-block: clamp(2rem, 10vw, 4rem);
     overflow-x: hidden;
+}
+
+body.dark-theme {
+    color: white;
 }
 
 .foto-perfil {
@@ -77,19 +81,26 @@ main {
     height: 65px;
 
     border-radius: 60px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(196, 196, 196, 0.4);
 
-    border: 1px rgba(113 119 144 / 25%) solid;
+    border: 1px rgba(59, 60, 64, 0.25) solid;
 
     transition: all ease .75s;
+}
 
+.dark-theme>main>.link {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px rgba(113 119 144 / 25%) solid;
 }
 
 .link:hover,
 .link:focus {
+    background-color: rgba(226, 226, 226, 0.75);
+}
+
+.dark-theme>main>.link:hover,
+.dark-theme>main>.link:focus {
     background-color: rgba(0, 0, 0, 0.75);
-
-
 }
 
 
@@ -101,8 +112,11 @@ main {
 .icon {
     max-width: 50px;
     border-radius: 50%;
-    filter: invert(1);
     transform: scale(0.95);
+}
+
+.dark-theme>main>.link>.icon {
+    filter: invert(1);
 }
 
 .link-text {
@@ -118,7 +132,8 @@ p {
 }
 
 footer {
-    background: black;
+    background: rgba(0, 0, 0, 0.9);
+    ;
     color: #e0e0e0;
     height: 10vh;
     position: fixed;
@@ -162,8 +177,8 @@ footer>p {
 }
 
 .app {
-    background-color: rgba(16 18 27 / 40%);
-    border: 1px rgba(113 119 144 / 25%) solid;
+    background-color: rgba(190, 190, 190, 0.4);
+    border: 1px rgba(192, 195, 206, 0.25) solid;
     max-width: 400px;
     min-height: 720px;
     display: flex;
@@ -176,10 +191,17 @@ footer>p {
     font-weight: 500;
 
     padding-bottom: 40px;
+
+    position: relative;
 }
 
-.download{
-transform: scale(0.7);
+.app.dark-theme {
+    background-color: #10121b66;
+    border: 1px rgba(113 119 144 / 25%) solid;
+}
+
+.download {
+    transform: scale(0.7);
 }
 
 @media screen and (max-width: 500px) {
@@ -212,4 +234,100 @@ transform: scale(0.7);
         right: 0;
         border-radius: 0;
     }
+}
+
+
+.holder {
+    transform: scale(0.175);
+    height: 100px;
+    width: 200px;
+    border-radius: 50px;
+    background: #bdc3c7;
+    transition: 0.15s background ease-out;
+    z-index: 10;
+}
+
+.toggle {
+    position: absolute;
+    top: -10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background: #ecf0f1;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+@keyframes toggleOn {
+    0% {
+        height: 120px;
+        left: -10px;
+        top: -10px;
+        border-radius: 60px;
+        background: #ecf0f1;
+    }
+
+    15% {
+        height: 100px;
+        left: 40px;
+        top: 0px;
+        border-radius: 100px;
+    }
+
+    100% {
+        height: 120px;
+        left: 90px;
+        top: -10px;
+        border-radius: 60px;
+        background: #111;
+    }
+}
+
+@keyframes toggleOff {
+    0% {
+        height: 120px;
+        left: 90px;
+        top: -10px;
+        border-radius: 60px;
+        background: #111;
+    }
+
+    15% {
+        height: 100px;
+        left: 40px;
+        top: 0px;
+        border-radius: 100px;
+    }
+
+    100% {
+        height: 120px;
+        left: -10px;
+        top: -10px;
+        border-radius: 60px;
+        background: #ecf0f1;
+    }
+}
+
+.off {
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.on {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.on .toggle {
+    animation: toggleOn 0.15s ease-out;
+    left: 90px;
+    background: black;
+}
+
+.off .toggle {
+    animation: toggleOff 0.15s ease-out;
+    left: -10px;
+}
+
+.holder{
+    position: relative;
+    right: 0;
+    top: 0;
 }
