@@ -9,8 +9,13 @@
 }
 
 body {
+    background-image: url("content/plants-background.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     background-color: #e0e0e0;
-    background-color: ffffff;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -91,7 +96,6 @@ main {
 .link:focus {
     background-color: rgba(0, 0, 0, 0.75);
 }
-
 
 .link:active {
     transform: scale(0.95);
@@ -209,6 +213,7 @@ footer>p {
         min-width: -webkit-fill-available;
         min-width: fill-available;
         padding-bottom: 125px;
+        min-height: 100vh;
     }
 
     .container {
