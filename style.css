@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url("content/plants-background.jpg");
+    /* background-image: url("content/plants-background.jpg"); */
     min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
