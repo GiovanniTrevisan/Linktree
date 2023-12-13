@@ -6,6 +6,8 @@
     box-sizing: border-box;
 
     text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.9);
+
+    margin-bottom: env(safe-area-inset-bottom)
 }
 
 body {
@@ -24,6 +26,9 @@ body {
     color: white;
     padding-block: clamp(2rem, 10vw, 4rem);
     overflow-x: hidden;
+
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 .foto-perfil {
